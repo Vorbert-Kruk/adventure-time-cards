@@ -1,0 +1,58 @@
+@import './variables.scss';
+@import './mixins.scss';
+@import './utility-classes.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: var(--accent-strong-opaque);
+  font-family: 'Roboto', sans-serif;
+  color: $white-color;
+}
+
+.card {
+  &_container {
+    --card-color: #{$blue-color};
+    --card-color-strong-opaque: #{$blue-strong-opaque-color};
+    --card-color-opaque: #{$blue-opaque-color};
+    --card-color-box-shadow: 0px 4px 30px 16px #{$blue-box-shadow-color};
+
+    min-width: 30rem;
+    min-height: 54rem;
+    border-radius: 2rem;
+    background-color: $white-color;
+    box-shadow: var(--card-color-box-shadow);
+    @include centerAbsolutely();
+  }
+
+  & {
+    @include flex();
+  }
+
+  &_top {
+    padding: 2.15rem 1.75rem;
+    @include flex(row, center);
+
+    &_name {
+      font-size: 3rem;
+    }
+  }
+
+  &_bottom {
+  }
+
+  &_label {
+    display: inline-block;
+    padding: 0.2em 0.46em;
+    background-color: var(--card-color-opaque);
+    border-radius: 2em;
+    color: var(--card-color);
+    font-weight: bold;
+  }
+}

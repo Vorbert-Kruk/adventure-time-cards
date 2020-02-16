@@ -1,0 +1,26 @@
+@mixin flex(
+  $direction: column,
+  $justifyContent: flex-start,
+  $alignItems: stretch
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin centerAbsolutely($centerDirection: center) {
+  position: absolute;
+
+  @if $centerDirection == vertical {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else if $centerDirection == horizontal {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,17 @@
+$dark-color: #232323;
+$white-color: #fff;
+$light-color: #f4f4f4;
+
+$blue-color: hsl(215, 100%, 60%);
+$blue-strong-opaque-color: rgba($blue-color, 0.7);
+$blue-opaque-color: rgba($blue-color, 0.3);
+$blue-box-shadow-color: hsla(240, 100%, 60%, 0.3);
+
+// $card-box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.35);
+$card-box-shadow: 0px 4px 24px hsla(240, 100%, 60%, 30%);
+
+:root {
+  --accent: #{$blue-color};
+  --accent-strong-opaque: #{$blue-strong-opaque-color};
+  --accent-opaque: #{$blue-opaque-color};
+}
