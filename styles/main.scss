@@ -28,20 +28,21 @@ img {
     --card-color-opaque: #{$blue-opaque-color};
     --card-color-box-shadow: 0px 4px 30px 16px #{$blue-box-shadow-color};
 
-    min-width: 30rem;
-    min-height: 54rem;
     border-radius: 2rem;
     background-color: $white-color;
     box-shadow: var(--card-color-box-shadow);
+    overflow: hidden;
     @include centerAbsolutely();
   }
 
   & {
+    max-width: 30rem;
+    min-height: 54rem;
     @include flex();
   }
 
   &_top {
-    padding: 2.15rem 1.75rem;
+    padding: 2.15rem 1.75rem 1.25rem;
     @include flex(column, center, center);
 
     &_name {
@@ -56,17 +57,50 @@ img {
   }
 
   &_bottom {
+    padding: 1.5rem 2rem;
     background-color: var(--card-color);
+    box-shadow: var(--card-color-box-shadow);
     flex: 1;
+
+    &_title,
+    &_description {
+      text-align: center;
+    }
+
+    &_title {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    &_description {
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+    }
   }
 
-  &_label {
+  .label {
+    --label-background: var(--card-color-opaque);
+    --label-color: var(--card-color);
+
     display: inline-block;
     padding: 0.2em 0.46em;
-    background-color: var(--card-color-opaque);
+    background-color: var(--label-background);
     border-radius: 2em;
-    color: var(--card-color);
+    color: var(--label-color);
     font-weight: bold;
+    user-select: none;
+
+    &_white {
+      --label-background: #{$white-opaque-color};
+      --label-color: #{$white-color};
+      padding: 0.3em 0.5em;
+    }
+
+    &_container {
+      font-size: 1.5rem;
+      margin-top: 1.25rem;
+      @include flex(row, space-between);
+    }
   }
 
   &_statistic {
@@ -77,6 +111,7 @@ img {
     }
 
     & {
+      user-select: none;
       @include flex(row, center, self-end);
       @include statisticColors();
     }
