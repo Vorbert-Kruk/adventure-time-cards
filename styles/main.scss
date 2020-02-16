@@ -26,13 +26,14 @@ img {
     --card-color: #{$blue-color};
     --card-color-strong-opaque: #{$blue-strong-opaque-color};
     --card-color-opaque: #{$blue-opaque-color};
-    --card-color-box-shadow: 0px 4px 30px 16px #{$blue-box-shadow-color};
+    --card-box-shadow: 0px 4px 30px 16px #{$blue-box-shadow-color};
 
     border-radius: 2rem;
     background-color: $white-color;
-    box-shadow: var(--card-color-box-shadow);
+    box-shadow: var(--card-box-shadow);
     overflow: hidden;
     @include centerAbsolutely();
+    @include cardColors();
   }
 
   & {

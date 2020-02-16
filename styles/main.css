@@ -37,17 +37,37 @@ img {
   --card-color: #3388ff;
   --card-color-strong-opaque: rgba(51, 136, 255, 0.7);
   --card-color-opaque: rgba(51, 136, 255, 0.3);
-  --card-color-box-shadow: 0px 4px 30px 16px rgba(51, 51, 255, 0.3);
+  --card-box-shadow: 0px 4px 30px 16px rgba(51, 51, 255, 0.3);
   border-radius: 2rem;
   background-color: #fff;
-  -webkit-box-shadow: var(--card-color-box-shadow);
-          box-shadow: var(--card-color-box-shadow);
+  -webkit-box-shadow: var(--card-box-shadow);
+          box-shadow: var(--card-box-shadow);
   overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.card_container_blue {
+  --card-color: #3388ff;
+  --card-color-opaque: rgba(51, 136, 255, 0.3);
+}
+
+.card_container_yellow {
+  --card-color: #ffb429;
+  --card-color-opaque: rgba(255, 180, 41, 0.3);
+}
+
+.card_container_purple {
+  --card-color: #a666ff;
+  --card-color-opaque: rgba(166, 102, 255, 0.3);
+}
+
+.card_container_dark {
+  --card-color: #162737;
+  --card-color-opaque: rgba(22, 39, 55, 0.3);
 }
 
 .card {
