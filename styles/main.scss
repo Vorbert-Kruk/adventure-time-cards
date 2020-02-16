@@ -56,6 +56,8 @@ img {
   }
 
   &_bottom {
+    background-color: var(--card-color);
+    flex: 1;
   }
 
   &_label {
@@ -69,11 +71,47 @@ img {
 
   &_statistic {
     &_container {
+      width: 100%;
+      margin-top: 0.75rem;
       @include flex(row, space-between);
     }
 
     & {
+      @include flex(row, center, self-end);
       @include statisticColors();
+    }
+
+    &_points {
+      padding: 0.125em 0.5em;
+      background-color: var(--opaque-color);
+      border-radius: 0.5em;
+      color: var(--color);
+      font-size: 3.5rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    &_icon {
+      @include centerAbsolutely();
+      margin-top: 0.15rem;
+      height: 1.75rem;
+
+      &_swords {
+        margin-top: 0;
+        height: 2.25rem;
+      }
+
+      &_circle {
+        $circle-size: 3.25rem;
+        margin-top: 2.25rem;
+        margin-left: -1.75rem;
+
+        position: relative;
+        width: $circle-size;
+        height: $circle-size;
+        background-color: var(--color);
+        border-radius: 50%;
+      }
     }
   }
 }
