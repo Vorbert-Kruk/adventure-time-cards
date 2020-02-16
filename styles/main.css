@@ -5,6 +5,12 @@
   --accent-opaque: rgba(51, 136, 255, 0.3);
 }
 
+:root {
+  --accent: #3388ff;
+  --accent-strong-opaque: rgba(51, 136, 255, 0.7);
+  --accent-opaque: rgba(51, 136, 255, 0.3);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +23,14 @@ body {
   background-color: var(--accent-strong-opaque);
   font-family: 'Roboto', sans-serif;
   color: #fff;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
 }
 
 .card_container {
@@ -58,20 +72,26 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card_top_name {
   font-size: 3rem;
+}
+
+.card_top_image {
+  margin: 0 auto;
+  margin-top: 2.125rem;
+  width: 19.5rem;
 }
 
 .card_label {
@@ -81,5 +101,36 @@ body {
   border-radius: 2em;
   color: var(--card-color);
   font-weight: bold;
+}
+
+.card_statistic_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.card_statistic_orange {
+  --color: #f2994a;
+  --opaque-color: rgba(242, 153, 74, 0.3);
+}
+
+.card_statistic_green {
+  --color: #27ae60;
+  --opaque-color: rgba(39, 174, 96, 0.3);
+}
+
+.card_statistic_red {
+  --color: #eb5757;
+  --opaque-color: rgba(235, 87, 87, 0.3);
 }
 /*# sourceMappingURL=main.css.map */

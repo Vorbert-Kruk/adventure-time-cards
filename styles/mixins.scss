@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 @mixin flex(
   $direction: column,
   $justifyContent: flex-start,
@@ -22,5 +24,34 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+@mixin statisticColors() {
+  $color-key-name: 'color';
+  $opaque-color-key-name: 'opaque-color';
+  $colors: (
+    'orange': (
+      $color-key-name: $orange-color,
+      $opaque-color-key-name: $orange-opaque-color,
+    ),
+    'green': (
+      $color-key-name: $green-color,
+      $opaque-color-key-name: $green-opaque-color,
+    ),
+    'red': (
+      $color-key-name: $red-color,
+      $opaque-color-key-name: $red-opaque-color,
+    ),
+  );
+
+  @each $colorName, $colorValues in $colors {
+    &_#{$colorName} {
+      --#{$color-key-name}: #{map-get($colorValues, $color-key-name)};
+      --#{$opaque-color-key-name}: #{map-get(
+          $colorValues,
+          $opaque-color-key-name
+        )};
+    }
   }
 }
