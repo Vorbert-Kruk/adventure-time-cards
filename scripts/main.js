@@ -18,7 +18,7 @@ const resetBackgroundColor = () =>
   changeBackgroundColor(defaultBackgroundColor);
 
 const changeBackgroundColorToCardColor = e =>
-  changeBackgroundColor(e.target.getPropertyValue('card-color'));
+  changeBackgroundColor(e.target.getPropertyValue('background-color'));
 
 cards.forEach(card => {
   card.addEventListener('mouseenter', changeBackgroundColorToCardColor);

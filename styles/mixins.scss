@@ -11,22 +11,6 @@
   align-items: $alignItems;
 }
 
-@mixin centerAbsolutely($centerDirection: center) {
-  position: absolute;
-
-  @if $centerDirection == vertical {
-    top: 50%;
-    transform: translateY(-50%);
-  } @else if $centerDirection == horizontal {
-    left: 50%;
-    transform: translateX(-50%);
-  } @else {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 @mixin statisticColors() {
   $color-key-name: 'color';
   $opaque-color-key-name: 'opaque-color';
