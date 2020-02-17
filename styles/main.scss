@@ -24,7 +24,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: $white-color;
   overflow: hidden;
-  transition: background-color 350ms ease;
+  transition: background-color $transition-time ease;
 }
 
 img {
@@ -52,7 +52,7 @@ img {
     box-shadow: $card-box-shadow;
     overflow: hidden;
     align-self: center;
-    transition: all 350ms ease;
+    transition: transform $transition-time ease;
     @include flex(row, center, self-end);
     @include cardColors();
 
