@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: var(--accent-strong-opaque);
+  background-color: $light-color;
   font-family: 'Roboto', sans-serif;
   color: $white-color;
   overflow: hidden;
@@ -41,19 +41,26 @@ img {
     --card-color: #{$blue-color};
     --card-color-strong-opaque: #{$blue-strong-opaque-color};
     --card-color-opaque: #{$blue-opaque-color};
-    --card-box-shadow: 0px 4px 30px 16px #{$blue-box-shadow-color};
+    --card-box-shadow: #{$blue-box-shadow-color};
 
     border-radius: 2rem;
     background-color: transparent;
-    box-shadow: var(--card-box-shadow);
+    box-shadow: 0px 4px 30px 16px rgba(23, 23, 23, 0.2);
     overflow: hidden;
     align-self: center;
+    transition: all 350ms ease;
     @include flex(row, center, self-end);
     @include cardColors();
 
     *::selection {
       color: var(--card-color);
       background-color: $white-color;
+    }
+
+    &:hover {
+      .card_overlay {
+        opacity: 0.75;
+      }
     }
   }
 
@@ -65,12 +72,14 @@ img {
 
   &_overlay {
     position: absolute;
-    background-color: hsl(0, 100%, 70%);
+    background-color: var(--card-color);
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0;
+    transition: opacity 350ms ease;
   }
 
   &_top {

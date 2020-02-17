@@ -60,31 +60,26 @@
   $color-key-name: 'card-color';
   $opaque-color-key-name: 'card-color-opaque';
   $strong-opaque-color-key-name: 'card-strong-opaque-color';
-  $box-shadow-key-name: 'card-box-shadow';
   $colors: (
     'blue': (
       $color-key-name: $blue-color,
       $opaque-color-key-name: $blue-opaque-color,
       $strong-opaque-color-key-name: $blue-strong-opaque-color,
-      $box-shadow-key-name: $blue-box-shadow-color,
     ),
     'yellow': (
       $color-key-name: $yellow-color,
       $opaque-color-key-name: $yellow-opaque-color,
       $strong-opaque-color-key-name: $yellow-strong-opaque-color,
-      $box-shadow-key-name: $yellow-box-shadow-color,
     ),
     'purple': (
       $color-key-name: $purple-color,
       $opaque-color-key-name: $purple-opaque-color,
       $strong-opaque-color-key-name: $purple-strong-opaque-color,
-      $box-shadow-key-name: $purple-box-shadow-color,
     ),
     'dark': (
       $color-key-name: $dark-color,
       $opaque-color-key-name: $dark-opaque-color,
       $strong-opaque-color-key-name: $dark-strong-opaque-color,
-      $box-shadow-key-name: $dark-box-shadow-color,
     ),
   );
 
@@ -94,6 +89,10 @@
       --#{$opaque-color-key-name}: #{map-get(
           $colorValues,
           $opaque-color-key-name
+        )};
+      --#{$strong-opaque-color-key-name}: #{map-get(
+          $colorValues,
+          $color-key-name
         )};
     }
   }
