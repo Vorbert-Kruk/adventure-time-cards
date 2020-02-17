@@ -11,6 +11,10 @@
   --accent-opaque: rgba(51, 136, 255, 0.3);
 }
 
+:root {
+  font-size: 0.75rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +27,7 @@ body {
   background-color: var(--accent-strong-opaque);
   font-family: 'Roboto', sans-serif;
   color: #fff;
+  overflow: hidden;
 }
 
 img {
@@ -33,21 +38,53 @@ img {
   -webkit-user-drag: none;
 }
 
+.cards_container {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  background-color: #fff;
+}
+
 .card_container {
   --card-color: #3388ff;
   --card-color-strong-opaque: rgba(51, 136, 255, 0.7);
   --card-color-opaque: rgba(51, 136, 255, 0.3);
   --card-box-shadow: 0px 4px 30px 16px rgba(51, 51, 255, 0.3);
   border-radius: 2rem;
-  background-color: #fff;
+  background-color: transparent;
   -webkit-box-shadow: var(--card-box-shadow);
           box-shadow: var(--card-box-shadow);
   overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: self-end;
+      -ms-flex-align: self-end;
+          align-items: self-end;
 }
 
 .card_container_blue {
@@ -70,8 +107,18 @@ img {
   --card-color-opaque: rgba(22, 39, 55, 0.3);
 }
 
+.card_container *::-moz-selection {
+  color: var(--card-color);
+  background-color: #fff;
+}
+
+.card_container *::selection {
+  color: var(--card-color);
+  background-color: #fff;
+}
+
 .card {
-  max-width: 30rem;
+  width: 30rem;
   min-height: 54rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,6 +133,16 @@ img {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+}
+
+.card_overlay {
+  position: absolute;
+  background-color: #ff6666;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .card_top {
@@ -112,7 +169,7 @@ img {
 .card_top_image {
   margin: 0 auto;
   margin-top: 2.125rem;
-  width: 19.5rem;
+  height: 19.625rem;
 }
 
 .card_bottom {
