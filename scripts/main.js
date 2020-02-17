@@ -17,10 +17,10 @@ const changeBackgroundColor = newColor =>
 const resetBackgroundColor = () =>
   changeBackgroundColor(defaultBackgroundColor);
 
-const changeBackgroundColorToCardColor = e =>
+const changeBackgroundColorWithCardColor = e =>
   changeBackgroundColor(e.target.getPropertyValue('background-color'));
 
 cards.forEach(card => {
-  card.addEventListener('mouseenter', changeBackgroundColorToCardColor);
+  card.addEventListener('mouseenter', changeBackgroundColorWithCardColor);
   card.addEventListener('mouseleave', resetBackgroundColor);
 });
