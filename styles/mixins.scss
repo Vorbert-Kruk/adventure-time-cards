@@ -97,3 +97,31 @@
     }
   }
 }
+
+@function getRidOfUnitType($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-value(
+  $propertyName,
+  $min-value,
+  $max-value,
+  $min-width: 320px,
+  $max-width: 1920px
+) {
+  & {
+    #{$propertyName}: $max-value;
+
+    @media screen and (min-width: $min-width) and (max-width: $max-width) {
+      #{$propertyName}: calc(
+        #{$min-value} + (16px * #{getRidOfUnitType($max-value - $min-value)}) * ((
+                100vw - #{$min-width}
+              ) / #{getRidOfUnitType($max-width - $min-width)})
+      );
+    }
+
+    @media screen and (max-width: #{$min-width - 1}) {
+      #{$propertyName}: $min-value;
+    }
+  }
+}
