@@ -4,26 +4,20 @@ $white-opaque-color: rgba(#fff, 0.3);
 $light-color: #f4f4f4;
 
 $blue-color: hsl(215, 100%, 60%);
-$blue-strong-opaque-color: rgba($blue-color, 0.7);
 $blue-opaque-color: rgba($blue-color, 0.3);
-$blue-box-shadow-color: hsla(240, 100%, 60%, 0.3);
+$blue-background-color: rgba($blue-color, 0.75);
 
 $yellow-color: hsl(39, 100%, 58%);
-$yellow-strong-opaque-color: rgba($yellow-color, 0.7);
 $yellow-opaque-color: rgba($yellow-color, 0.3);
-$yellow-box-shadow-color: hsla(240, 100%, 60%, 0.3);
+$yellow-background-color: rgba($yellow-color, 0.75);
 
 $purple-color: hsl(265, 100%, 70%);
-$purple-strong-opaque-color: rgba($purple-color, 0.7);
 $purple-opaque-color: rgba($purple-color, 0.3);
-$purple-box-shadow-color: hsla(240, 100%, 60%, 0.3);
+$purple-background-color: rgba($purple-color, 0.75);
 
-// $dark-color: #565656;
-// Poniżej jest kolor guntera xD
 $dark-color: #162737;
-$dark-strong-opaque-color: rgba($dark-color, 0.7);
 $dark-opaque-color: rgba($dark-color, 0.3);
-$dark-box-shadow-color: hsla(240, 100%, 60%, 0.3);
+$dark-background-color: rgba($dark-color, 0.75);
 
 $orange-color: #f2994a;
 $orange-strong-opaque-color: rgba($orange-color, 0.7);

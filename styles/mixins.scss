@@ -59,27 +59,27 @@
 @mixin cardColors() {
   $color-key-name: 'card-color';
   $opaque-color-key-name: 'card-color-opaque';
-  $strong-opaque-color-key-name: 'card-strong-opaque-color';
+  $background-color-key-name: 'background-color';
   $colors: (
     'blue': (
       $color-key-name: $blue-color,
       $opaque-color-key-name: $blue-opaque-color,
-      $strong-opaque-color-key-name: $blue-strong-opaque-color,
+      $background-color-key-name: $blue-background-color,
     ),
     'yellow': (
       $color-key-name: $yellow-color,
       $opaque-color-key-name: $yellow-opaque-color,
-      $strong-opaque-color-key-name: $yellow-strong-opaque-color,
+      $background-color-key-name: $yellow-background-color,
     ),
     'purple': (
       $color-key-name: $purple-color,
       $opaque-color-key-name: $purple-opaque-color,
-      $strong-opaque-color-key-name: $purple-strong-opaque-color,
+      $background-color-key-name: $purple-background-color,
     ),
     'dark': (
       $color-key-name: $dark-color,
       $opaque-color-key-name: $dark-opaque-color,
-      $strong-opaque-color-key-name: $dark-strong-opaque-color,
+      $background-color-key-name: $dark-background-color,
     ),
   );
 
@@ -90,38 +90,10 @@
           $colorValues,
           $opaque-color-key-name
         )};
-      --#{$strong-opaque-color-key-name}: #{map-get(
+      --#{$background-color-key-name}: #{map-get(
           $colorValues,
-          $color-key-name
+          $background-color-key-name
         )};
-    }
-  }
-}
-
-@function getRidOfUnitType($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-value(
-  $propertyName,
-  $min-value,
-  $max-value,
-  $min-width: 320px,
-  $max-width: 1920px
-) {
-  & {
-    #{$propertyName}: $max-value;
-
-    @media screen and (min-width: $min-width) and (max-width: $max-width) {
-      #{$propertyName}: calc(
-        #{$min-value} + (16px * #{getRidOfUnitType($max-value - $min-value)}) * ((
-                100vw - #{$min-width}
-              ) / #{getRidOfUnitType($max-width - $min-width)})
-      );
-    }
-
-    @media screen and (max-width: #{$min-width - 1}) {
-      #{$propertyName}: $min-value;
     }
   }
 }

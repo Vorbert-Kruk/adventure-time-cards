@@ -45,9 +45,7 @@ img {
 
   &_container {
     --card-color: #{$blue-color};
-    --card-color-strong-opaque: #{$blue-strong-opaque-color};
     --card-color-opaque: #{$blue-opaque-color};
-    --card-box-shadow: #{$blue-box-shadow-color};
 
     border-radius: 2rem;
     background-color: transparent;
