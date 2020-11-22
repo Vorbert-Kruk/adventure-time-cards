@@ -1,27 +1,27 @@
 {
-  "name": "adventure-time-cards",
-  "version": "1.0.0",
-  "description": "Cards with the characters from animated show called \"Adventure time\"",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Vorbert-Kruk/adventure-time-cards.git"
-  },
-  "keywords": [
-    "adventure",
-    "time",
-    "cards"
-  ],
-  "author": "Norbert Kruk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Vorbert-Kruk/adventure-time-cards/issues"
-  },
-  "homepage": "https://github.com/Vorbert-Kruk/adventure-time-cards#readme",
-  "dependencies": {
-    "node-sass": "^4.13.1"
-  }
+    "name": "adventure-time-cards",
+    "version": "1.0.0",
+    "description": "Cards with the characters from animated show called \"Adventure time\"",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Vorbert-Kruk/adventure-time-cards.git"
+    },
+    "keywords": [
+        "adventure",
+        "time",
+        "cards"
+    ],
+    "author": "Norbert Kruk",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Vorbert-Kruk/adventure-time-cards/issues"
+    },
+    "homepage": "https://github.com/Vorbert-Kruk/adventure-time-cards#readme",
+    "dependencies": {
+        "node-sass": "^4.14.1"
+    }
 }
